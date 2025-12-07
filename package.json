@@ -14,8 +14,15 @@
   "contributes": {
     "commands": [
       {
-        "command": "todos.helloWorld",
+        "command": "todos.createTodo",
         "title": "Hello World"
+      }
+    ],
+    "keybindings": [
+      {
+        "command": "todos.createTodo",
+        "key": "ctrl+shift+8",
+        "when": "editorTextFocus"
       }
     ]
   },
