@@ -6,4 +6,8 @@ Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how 
 
 ## [Unreleased]
 
-- Initial release
+## Added
+- Added `TodoItem` type definition to `src/types/TodoItem.ts`.
+
+## Changed
+- Updated README.md with random shit.
