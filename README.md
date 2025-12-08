@@ -3,6 +3,10 @@
 Lightweight VS Code extension that adds human-readable IDs (HUIDs) to TODO
 comments and keeps them synced in a workspace-local JSON store.
 
+## Demo
+
+https://github.com/user-attachments/assets/1d5ab5a4-b989-45ef-973e-b0806925a0b7
+
 ## Features
 - Add a unique HUID to the TODO on the current line and record it in `.todos/todos.json`.
 - Mark a TODO as done; the line is removed and the JSON store is updated.
