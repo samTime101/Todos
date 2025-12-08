@@ -1,8 +1,11 @@
 import * as vscode from 'vscode';
 import { parseTodoLine } from './TodoParser';
 import { generateHUID } from '../utils/huid';
-import { getCommentSymbol } from '../utils/language';
 import { ParsedTodo } from '../types/ParsedTodo';
+import { findGitRepo } from './findGitRepo';
+import { ensureTodosFolder } from './TodosFolder';
+import { updateTodoLine } from './updateTodoLine';
+import { initializeGitifNotExists } from './initializeGitifNotExists';
 
 export async function processTodoLine(editor: vscode.TextEditor) {
     /*
@@ -27,13 +30,10 @@ export async function processTodoLine(editor: vscode.TextEditor) {
         vscode.window.showInformationMessage(`TODO already has HUID: ${existingUID}`);
         return;
     }
+    const workspaceFolder = vscode.workspace.getWorkspaceFolder(doc.uri);
+    const repo = await findGitRepo(workspaceFolder);
+    await initializeGitifNotExists(repo);
+    await ensureTodosFolder(repo);
     const huid = generateHUID();
-
-    const newLine = `${getCommentSymbol(doc.languageId)} TODO<${huid}>: ${heading}`;
-    await editor.edit(editBuilder => {
-        editBuilder.replace(doc.lineAt(lineNum).range, newLine);
-    }
-    );
-
-    vscode.window.showInformationMessage(`TODO created with HUID: ${huid}`);
+    await updateTodoLine(editor, huid, heading, doc.languageId);
 }
