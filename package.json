@@ -1,6 +1,6 @@
 {
-  "name": "todos",
-  "displayName": "todos",
+  "name": "todoit",
+  "displayName": "todoit",
   "description": "A simple code todos marker and storer for vs code",
   "version": "1.0.1",
   "publisher": "samTime101",
