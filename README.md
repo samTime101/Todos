@@ -17,6 +17,11 @@ https://github.com/user-attachments/assets/48cd71eb-67cb-418f-87d5-c9cad5a2e6c9
 - Node.js 18+ recommended for tooling (build/test)
 
 ## Installation
+
+### Installation By VS Code Marketplace
+Installation link: https://marketplace.visualstudio.com/items?itemName=SamTIme101.justodo
+
+### Installation By VSIX
 https://github.com/user-attachments/assets/979c4d01-df12-440b-8808-5823dd2c3505
 
 ## Usage
