@@ -2,7 +2,7 @@
   "name": "justodo",
   "displayName": "justodo",
   "description": "A simple code todos marker and storer for vs code",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "publisher": "samTime101",
   "icon": "images/icon.png",
   "author": {
